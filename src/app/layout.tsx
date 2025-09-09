@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {Poppins, Questrial} from "next/font/google";
 import "./globals.css";
+import NavigationComponent from "@/aymericpixel/app/ui/foundation/navigationComponent";
+import FooterComponent from "@/aymericpixel/app/ui/foundation/footerComponent";
+import {ReactNode} from "react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const questrial = Questrial({
+  variable: "--font-questrial",
   subsets: ["latin"],
+	weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+	variable: "--font-poppins",
   subsets: ["latin"],
+  weight: "500",
 });
 
 export const metadata: Metadata = {
@@ -20,14 +26,14 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="fr" className={`${questrial.className} ${poppins.variable}`}>
+      <body>
+        <NavigationComponent />
         {children}
+        <FooterComponent />
       </body>
     </html>
   );

@@ -1,26 +1,32 @@
 @import "tailwindcss";
+@import "@flaticon/flaticon-uicons/css/all/all.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --primaryColor: #29A8A1;
+    --secondaryColor: #3AE2DA;
+    --darkColor: #1F1F1F;
+    --lightModeColor: #F7F7F7;
+    --grayColor: #676767;
+
+    --fontAccent: var(--font-poppins);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a, p, b, strong, i, em, span, strong, ul, li, ol, dd, dt {
+    @apply text-lg;
+}
+
+strong, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fontAccent), sans-serif;
 }

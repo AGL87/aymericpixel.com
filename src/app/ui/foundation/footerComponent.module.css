@@ -1,0 +1,74 @@
+@reference "../../globals.css";
+
+.footerBlock {
+    background: var(--darkColor);
+    color: var(--lightModeColor);
+
+    @apply flex flex-col px-12 py-6 gap-12 text-sm;
+}
+
+.footerLinksContainer {
+    @apply flex flex-wrap gap-4 justify-between items-baseline;
+}
+
+.footerLinksWrapper {
+    @apply flex flex-col md:flex-row gap-12 md:gap-40 justify-between md:mx-auto;
+}
+
+.footerCorporationBlock {
+    @apply flex gap-4 items-center;
+}
+
+.footerLogo {
+    @apply w-8 h-8;
+}
+
+.footerCorporationName {
+    @apply font-bold;
+}
+
+.footerLinksList{
+    @apply flex flex-col gap-2;
+
+    a, li {
+        @apply text-sm;
+    }
+
+    li {
+        &:first-of-type {
+            font-family: var(--fontAccent), sans-serif;
+            @apply underline pb-4;
+        }
+    }
+
+    a {
+        &:hover {
+            @apply underline;
+        }
+    }
+}
+
+.copyrightBlock {
+    @apply flex justify-center items-center;
+}
+
+.footerCorporationWrapper {
+    @apply flex flex-col gap-4 w-full lg:max-w-1/4 pb-4 lg:pb-0;
+}
+
+.footerCorporationText {
+    @apply text-sm;
+}
+
+.corporationLinks {
+    @apply flex gap-4;
+
+    i {
+        @apply text-2xl;
+        transition: color 0.3s ease;
+    }
+
+    i:hover {
+        color: var(--primaryColor);
+    }
+}

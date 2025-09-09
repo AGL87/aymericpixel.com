@@ -1,0 +1,97 @@
+@reference "../../globals.css";
+
+.navigationBlock {
+    @apply flex items-center justify-between px-4 md:px-12 py-2 bg-white relative;
+}
+
+.navigationSubcontainer {
+    @apply flex items-center gap-2;
+}
+
+.desktopOnly {
+    @apply hidden md:flex;
+}
+
+.mobileOnly {
+    @apply flex md:hidden;
+}
+
+.mainNavigationContainer {
+    @apply hidden md:flex gap-4;
+}
+
+.menuLogo {
+    @apply flex items-center w-12 h-12;
+}
+
+.menuLink {
+    @apply flex px-6 py-2 rounded-md text-lg;
+    transition: color 0.1s ease, background-color 0.3s ease;
+    color: var(--grayColor);
+    cursor: pointer;
+}
+.menuLink:hover {
+    color: var(--lightModeColor);
+    background: var(--primaryColor);
+}
+
+.menuCta {
+    @apply flex px-6 py-2 rounded-md text-lg;
+    color: var(--lightModeColor);
+    background: linear-gradient(35deg, var(--primaryColor), var(--secondaryColor)) 0 0 / 300% 300% no-repeat;
+    will-change: background-position;
+    transition: background-color 0.3s ease;
+    cursor:
+            url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1IiBzdHJva2Utd2lkdGg9IjEwIi8+Cjwvc3ZnPg==") 32 32,
+            url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSI1IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjkiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1IiBzdHJva2Utd2lkdGg9IjYiLz4KPC9zdmc+") 16 16,
+            pointer;
+}
+.menuCta:hover {
+    animation: gradientShift 2.5s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menuCta:hover { animation: none; }
+}
+
+.burgerButton {
+    @apply flex items-end justify-center w-10 h-10 rounded-md border cursor-pointer md:hidden;
+    transition: background-color .2s ease, border-color .2s ease;
+}
+.burgerButton:hover {
+    @apply bg-gray-50 border-gray-300;
+}
+
+.backdrop {
+    @apply fixed inset-0 bg-black/40 opacity-0 pointer-events-none md:hidden;
+    transition: opacity .2s ease;
+}
+.backdrop.open {
+    @apply opacity-100 pointer-events-auto;
+}
+
+.mobileMenu {
+    @apply fixed top-0 right-0 h-svh w-80 max-w-[85vw] bg-white shadow-2xl p-6 flex flex-col gap-4 translate-x-full md:hidden;
+    transition: transform .3s ease;
+    z-index: 50;
+}
+.mobileMenu.open {
+    @apply translate-x-0;
+}
+
+.mobileNavList {
+    @apply flex flex-col gap-2;
+}
+.mobileNavLink {
+    @apply block px-4 py-3 rounded-md text-lg text-gray-700;
+    transition: color .1s ease, background-color .3s ease;
+}
+.mobileNavLink:hover {
+    @apply bg-gray-900 text-white;
+}
