@@ -1,0 +1,53 @@
+@reference '../../globals.css';
+
+.formContent {
+    @apply flex flex-col gap-8 px-2 md:px-12 py-10 shadow-xl w-full rounded-2xl border mb-12;
+    border-color: rgb(from var(--grayColor) r g b / 25%);
+}
+
+.formHeader {
+    @apply flex;
+}
+
+.formTitle {
+    @apply text-2xl;
+}
+
+.formLine {
+    @apply flex flex-col lg:flex-row gap-4 w-full lg:justify-between lg:items-center;
+}
+
+.formColumn {
+    @apply flex flex-col flex-1 gap-2;
+}
+
+.field {
+    @apply w-full px-4 py-2 border rounded-xl outline-none;
+    border-color: rgb(from var(--grayColor) r g b / 25%);
+    transition: border-color 0.2s ease;
+    background: #ffffff;
+
+    &:hover, &:focus {
+        border-color: var(--primaryColor);
+    }
+}
+
+.formLabel {
+    @apply text-sm font-bold;
+    color: var(--grayColor);
+}
+
+.submitButton {
+    @apply flex gap-4 items-baseline-last w-fit px-4 py-2 text-lg rounded-xl text-white ml-auto mr-auto lg:mr-0 shadow-md;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    background-color: var(--primaryColor);
+
+    i {
+        @apply text-sm;
+    }
+
+    &:hover {
+        background-color: var(--secondaryColor);
+    }
+}

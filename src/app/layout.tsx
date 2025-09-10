@@ -32,7 +32,9 @@ export default function RootLayout({
     <html lang="fr" className={`${questrial.className} ${poppins.variable}`}>
       <body>
         <NavigationComponent />
-        {children}
+        <div className="superContainer">
+	        {children}
+        </div>
         <FooterComponent />
       </body>
     </html>

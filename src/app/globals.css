@@ -2,8 +2,8 @@
 @import "@flaticon/flaticon-uicons/css/all/all.css";
 
 :root {
-    --primaryColor: #29A8A1;
-    --secondaryColor: #3AE2DA;
+    --primaryColor: #008767;
+    --secondaryColor: #29A8A1;
     --darkColor: #1F1F1F;
     --lightModeColor: #F7F7F7;
     --grayColor: #676767;
@@ -27,6 +27,10 @@ a, p, b, strong, i, em, span, strong, ul, li, ol, dd, dt {
     @apply text-lg;
 }
 
-strong, h1, h2, h3, h4, h5, h6 {
+strong, h1, h2, h3, h4, h5, h6, label {
     font-family: var(--fontAccent), sans-serif;
+}
+
+.superContainer {
+    @apply min-h-screen;
 }

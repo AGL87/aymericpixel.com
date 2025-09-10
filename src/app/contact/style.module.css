@@ -1,0 +1,50 @@
+@reference '../globals.css';
+
+.contactPage {
+    @apply flex flex-col lg:flex-row md:gap-12;
+}
+
+.contactInformationSection {
+    @apply flex flex-col py-8 lg:max-w-1/3;
+}
+
+.contactInformationTitle {
+    @apply text-2xl pb-8;
+}
+
+.contactInformationParagraph {
+    color: var(--grayColor);
+}
+
+.contactBlockItemWrapper {
+    @apply flex gap-4 px-6 py-4 rounded-xl border mt-6 shadow w-fit mx-auto lg:mx-0;
+    border-color:rgb(from var(--grayColor) r g b / 25%);
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.contactBlockItemIcon {
+    @apply flex flex-col items-center justify-center;
+
+    i {
+        @apply text-2xl pt-2 py-0 px-2 rounded-2xl;
+        background:rgb(from var(--primaryColor) r g b / 25%);
+        color: var(--primaryColor);
+    }
+}
+
+.contactBlockItemContent {
+    @apply flex flex-col justify-center;
+}
+
+.targetLabel {
+    @apply text-lg;
+}
+
+.targetLink {
+    @apply text-sm cursor-pointer;
+    color: var(--primaryColor);
+}
