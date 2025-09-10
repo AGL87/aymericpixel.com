@@ -1,0 +1,14 @@
+@reference "../../globals.css";
+
+.headerBlock {
+    @apply flex flex-col items-center justify-center gap-6 px-4 py-12 min-h-72 mb-12;
+    background: linear-gradient(25deg, var(--primaryColor), var(--secondaryColor));
+}
+
+.headerTitle {
+    @apply text-white text-5xl font-normal;
+}
+
+.headerSubtitle {
+    @apply text-white text-2xl font-normal;
+}

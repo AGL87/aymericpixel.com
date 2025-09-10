@@ -27,6 +27,10 @@ a, p, b, strong, i, em, span, strong, ul, li, ol, dd, dt {
     @apply text-lg;
 }
 
-strong, h1, h2, h3, h4, h5, h6 {
+strong, h1, h2, h3, h4, h5, h6, label {
     font-family: var(--fontAccent), sans-serif;
+}
+
+.superContainer {
+    @apply min-h-screen;
 }
