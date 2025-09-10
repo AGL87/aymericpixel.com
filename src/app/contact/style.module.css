@@ -31,20 +31,20 @@
 
     i {
         @apply text-2xl pt-2 py-0 px-2 rounded-2xl;
-        background:rgb(from var(--secondaryColor) r g b / 25%);
+        background:rgb(from var(--primaryColor) r g b / 25%);
         color: var(--primaryColor);
     }
 }
 
 .contactBlockItemContent {
     @apply flex flex-col justify-center;
+}
 
-    span, strong {
-        @apply text-lg;
-    }
+.targetLabel {
+    @apply text-lg;
+}
 
-    strong, a {
-        @apply text-sm cursor-pointer;
-        color: var(--primaryColor);
-    }
+.targetLink {
+    @apply text-sm cursor-pointer;
+    color: var(--primaryColor);
 }

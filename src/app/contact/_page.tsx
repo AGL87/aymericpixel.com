@@ -3,6 +3,7 @@ import HeaderComponent from "@/aymericpixel/app/ui/foundation/heacerComponent";
 import BodyWrapperComponent from "@/aymericpixel/app/ui/foundation/bodyWrapperComponent";
 import ContactFormComponent from "@/aymericpixel/app/ui/contact/contactFormComponent";
 import style from './style.module.css';
+import Link from "next/link";
 
 export default function ContactPageUI() : ReactNode {
 	return (
@@ -24,8 +25,8 @@ export default function ContactPageUI() : ReactNode {
 								<i className="fi fi-rr-envelope"></i>
 							</div>
 							<div className={style.contactBlockItemContent}>
-								<span>Email</span>
-								<strong><a href="mailto:contact@aymericpixel.com" target={'_blank'}>contact@aymericpixel.com</a></strong>
+								<span className={style.targetLabel}>Email</span>
+								<strong><Link href="mailto:contact@aymericpixel.com" target={'_blank'} className={style.targetLink}>contact@aymericpixel.com</Link></strong>
 							</div>
 						</div>
 
@@ -34,8 +35,8 @@ export default function ContactPageUI() : ReactNode {
 								<i className="fi fi-brands-linkedin"></i>
 							</div>
 							<div className={style.contactBlockItemContent}>
-								<span>LinkedIn</span>
-								<strong><a href="https://www.linkedin.com/in/aymeric-leger-achard/" target={'_blank'}>/in/aymeric-leger-achard</a></strong>
+								<span className={style.targetLabel}>LinkedIn</span>
+								<strong><Link href="https://www.linkedin.com/in/aymeric-leger-achard/" target={'_blank'} className={style.targetLink}>/in/aymeric-leger-achard</Link></strong>
 							</div>
 						</div>
 					</section>

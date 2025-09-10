@@ -22,7 +22,7 @@ export default function ContactFormComponent() : ReactNode {
 
 			<div className={style.formLine}>
 				<div className={style.formColumn}>
-					<label htmlFor="devType">Type de projet *</label>
+					<label htmlFor="_devType">Type de projet *</label>
 					<UiSelectComponent name={"devType"} id={"devType"} options={[{
 						label: 'Développement web',
 						value: '__web_dev__'

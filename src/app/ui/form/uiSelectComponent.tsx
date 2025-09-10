@@ -136,7 +136,7 @@ export default function UiSelectComponent({
 		<div ref={containerRef} className={cn(styles.container, className)}>
 			<input type="hidden" name={name} value={selected?.value ?? ""} />
 			<input tabIndex={-1} aria-hidden required={required} value={selected?.value ?? ""} onChange={() => {}}
-			       style={{position: "absolute", opacity: 0, width: 0, height: 0, pointerEvents: "none"}} />
+			       style={{position: "absolute", opacity: 0, width: 0, height: 0, pointerEvents: "none"}} name={`_${name}`} id={`_${name}`} />
 			<button
 				id={triggerId}
 				ref={buttonRef}
