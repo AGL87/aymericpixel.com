@@ -1,0 +1,51 @@
+import {ReactNode} from "react";
+import HeaderComponent from "@/aymericpixel/app/ui/foundation/heacerComponent";
+import BodyWrapperComponent from "@/aymericpixel/app/ui/foundation/bodyWrapperComponent";
+import {PORTFOLIO_MOBILE_CARDS, PORTFOLIO_WEB_CARDS} from "@/aymericpixel/lib/front/portfolioConfig";
+import PortfolioCardComponent from "@/aymericpixel/app/ui/portfolio/portfolioCardComponent";
+import style from './style.module.css';
+
+export default function PortfolioPageUI() : ReactNode {
+	return (
+		<>
+			<HeaderComponent title={'Mes réalisations'} subTitle={'Découvrez les projets web et mobile que j\'ai développés'} />
+
+			<BodyWrapperComponent>
+				<div className={style.cardsWrapper}>
+					<section className={style.cardsBlockWrapper}>
+						<div className={style.cardsBlockTitleBlock}>
+							<h2 className={style.cardsTitle}>Développement Web</h2>
+							<p className={style.cardsDescription}>Sites web, applications web et solutions e-commerce</p>
+						</div>
+
+						<div className={style.cardsContainer}>
+							{PORTFOLIO_WEB_CARDS.map((card, index) => (
+								<PortfolioCardComponent key={`portfolio_web_${index}`} props={card} />
+							))}
+						</div>
+					</section>
+
+					<section className={style.cardsBlockWrapper}>
+						<div className={style.cardsBlockTitleBlock}>
+							<h2 className={style.cardsTitle}>Développement Mobile</h2>
+							<p className={style.cardsDescription}>Applications mobiles iOS et Android développées avec Flutter</p>
+						</div>
+
+						<div className={style.cardsContainer}>
+							{PORTFOLIO_MOBILE_CARDS.map((card, index) => (
+								<PortfolioCardComponent key={`portfolio_web_${index}`} props={card} />
+							))}
+						</div>
+					</section>
+				</div>
+			</BodyWrapperComponent>
+
+			<section className={style.ctaBlock}>
+				<strong className={style.ctaTitle}>Votre projet mérite une solution sur-mesure</strong>
+				<p className={style.ctaDescription}>Discutons ensemble de vos besoins et créons quelque chose d&#39;exceptionnel</p>
+
+				<a href="/contact" className={style.ctaButton}>Démarrer mon projet</a>
+			</section>
+		</>
+	);
+}

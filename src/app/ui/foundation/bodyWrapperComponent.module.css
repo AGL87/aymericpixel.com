@@ -1,5 +1,5 @@
 @reference "../../globals.css";
 
 .wrapper {
-    @apply px-2 md:px-16;
+    @apply px-2 md:px-16 min-h-screen;
 }

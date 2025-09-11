@@ -1,0 +1,53 @@
+@reference '../globals.css';
+
+.cardsBlockWrapper {
+    @apply flex flex-col gap-4;
+}
+
+.cardsWrapper {
+    @apply flex flex-col gap-18;
+}
+
+.cardsBlockTitleBlock {
+    @apply flex flex-col items-center gap-6 py-12;
+}
+
+.cardsContainer {
+    @apply flex gap-12 max-w-full overflow-x-scroll py-2;
+}
+
+.cardsTitle {
+    @apply text-4xl;
+}
+
+.cardsDescription {
+    @apply text-xl;
+    color: rgb(from var(--grayColor) r g b / 75%);
+}
+
+.ctaBlock {
+    @apply flex flex-col justify-center items-center gap-4 py-12 px-2 mt-24;
+    background: linear-gradient(25deg, var(--primaryColor), var(--secondaryColor));
+}
+
+.ctaTitle {
+    @apply text-white text-3xl;
+}
+
+.ctaDescription {
+    @apply text-lg text-white mb-8;
+}
+
+
+.ctaButton {
+    @apply flex gap-4 items-center px-4 py-2 text-lg rounded-xl  ml-auto mr-auto shadow-md;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    background-color: var(--color-white);
+    color: var(--primaryColor);
+
+    &:hover {
+        background-color: var(--primaryColor);
+        color: var(--color-white);
+    }
+}

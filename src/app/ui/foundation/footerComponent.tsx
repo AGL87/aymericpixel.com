@@ -15,7 +15,7 @@ export default function FooterComponent(): ReactNode {
 					</div>
 
 					<p className={style.footerCorporationText}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolores fugiat veniam qui exerci imperdiet eleifend volutpat possim adipisici invidunt amet. Nihil lorem wisi nostrud nisl sea, dolor tation eleifend mazim mollit voluptate consetetur iriure laboris sadipscing cum facilisis gubergren elit rebum deserunt. Molestie volutpat tempor nobis ullamco autem blandit aliqua incidunt luptatum proident mazim invidunt facilisis. Voluptate eleifend vel praesent no eu enim gubergren. Vulputate veniam aliquyam. Elit enim elit. Nulla mazim dolor.
+						Développeur freelance spécialisé en développement web et mobile. Solutions sur-mesure avec une approche moderne et performante pour mener à bien vos projets.
 					</p>
 
 					<div className={style.corporationLinks}>
@@ -35,7 +35,7 @@ export default function FooterComponent(): ReactNode {
 					<ul className={style.footerLinksList}>
 						<li>Liens utiles</li>
 						<li><Link href={"/"}>Accueil</Link></li>
-						<li><Link href={"/projects"}>Réalisatons</Link></li>
+						<li><Link href={"/portfolio"}>Réalisatons</Link></li>
 						<li><Link href={"/process"}>Processus</Link></li>
 						<li><Link href={"/contact"}>Contact</Link></li>
 					</ul>
