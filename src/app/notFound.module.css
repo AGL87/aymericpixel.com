@@ -1,0 +1,110 @@
+@reference "./globals.css";
+
+.container {
+    @apply min-h-screen relative overflow-hidden grid place-items-center px-8 py-8;
+    background:
+            radial-gradient(60rem 60rem at 10% 10%, rgba(from var(--primaryColor) r g b / 0.08), transparent 60%),
+            radial-gradient(50rem 50rem at 90% 90%, rgba(from var(--secondaryColor) r g b / 0.08), transparent 60%);
+}
+
+.decor {
+    @apply absolute inset-0 opacity-25 pointer-events-none;
+}
+
+.dotPrimary,
+.dotSecondary {
+    @apply absolute rounded-full blur-sm animate-pulse;
+}
+
+.dotPrimary {
+    top: 20%;
+    left: 20%;
+    @apply w-64 h-64;
+    background: rgba(from var(--primaryColor) r g b / 1);
+}
+
+.dotSecondary {
+    right: 20%;
+    bottom: 20%;
+    @apply w-48 h-48;
+    background: rgba(from var(--secondaryColor) r g b / 1);
+    animation-delay: .6s;
+}
+
+.content {
+    @apply text-center relative z-10 max-w-3xl w-full;
+}
+
+.block {
+    @apply mb-12;
+}
+
+.titleWrap {
+    @apply relative inline-block;
+}
+
+.title404 {
+    @apply font-extrabold leading-none mb-4 text-transparent bg-clip-text animate-bounce;
+    font-size: clamp(4.5rem, 16vw, 12rem);
+    background: linear-gradient(135deg, var(--primaryColor), var(--secondaryColor));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.title404Shadow {
+    @apply absolute inset-0 select-none font-extrabold blur-sm;
+    font-size: clamp(4.5rem, 16vw, 12rem);
+    color: rgba(from var(--primaryColor) r g b / 0.12);
+    user-select: none;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.subtitle {
+    @apply text-3xl md:text-4xl font-bold mb-6;
+}
+
+.paragraph {
+    @apply mx-auto mb-8 leading-relaxed max-w-xl text-base md:text-lg;
+    color: rgb(from var(--grayColor) r g b / 80%);
+}
+
+.ctas {
+    @apply flex flex-wrap items-center justify-center gap-4;
+}
+
+.btnPrimary,
+.btnSecondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold border-2 transition-all duration-200 ease-linear cursor-pointer;
+}
+
+.btnPrimary {
+    @apply text-white shadow;
+    background: linear-gradient(135deg, var(--primaryColor), var(--secondaryColor));
+}
+
+.btnPrimary:hover {
+    @apply scale-105 opacity-95 shadow-lg;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.btnSecondary {
+    @apply bg-transparent;
+    color: var(--primaryColor);
+    border-color: color-mix(in srgb, var(--primaryColor) 50%, transparent);
+}
+
+.btnSecondary:hover {
+    @apply scale-105;
+    color: var(--secondaryColor);
+    border-color: color-mix(in srgb, var(--secondaryColor) 70%, transparent);
+}
+
+.icon {
+    @apply w-5 h-5;
+}
+
+.status {
+    @apply mt-12 text-sm;
+    color: rgb(from var(--grayColor) r g b / 75%);
+}
