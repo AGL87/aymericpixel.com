@@ -1,12 +1,16 @@
-import {ReactNode} from "react";
-
 export interface LegalUsageItem {
 	title: string;
-	content: ReactNode;
+	texts: string[];
+}
+
+export interface LegalSection {
+	title: string;
+	items: LegalUsageItem[];
 }
 
 export interface LegalUsageText {
 	title: string;
+	preamble?: string;
 	lastEditionDate: string;
-	items: LegalUsageItem[];
+	items: LegalUsageItem[] | LegalSection[];
 }

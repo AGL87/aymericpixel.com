@@ -1,0 +1,5 @@
+@reference '../../globals.css';
+
+.contactPage {
+    @apply flex flex-col lg:flex-row md:gap-12;
+}

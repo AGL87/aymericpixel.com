@@ -6,7 +6,7 @@
 }
 
 .headerTitle {
-    @apply text-white text-5xl font-normal;
+    @apply text-white text-4xl lg:text-5xl font-normal;
 }
 
 .headerSubtitle {

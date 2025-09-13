@@ -1,0 +1,191 @@
+@reference './globals.css';
+
+.headerSuperBlock {
+    @apply flex flex-col lg:flex-row lg:justify-around items-center py-4 px-2 lg:px-12 gap-4 lg:gap-24 relative;
+}
+
+.headerTextBlock {
+    @apply flex flex-col gap-4 justify-center w-full lg:w-1/2;
+    z-index: 1;
+}
+
+.mainTitle {
+    @apply text-white mt-12 lg:mt-0;
+}
+
+.mainTitle, .subTitle {
+    @apply text-4xl lg:text-6xl text-center lg:text-left;
+}
+
+.subTitle {
+    @apply mb-6;
+    color: rgb(from var(--secondaryColor) r g b / 100%);
+}
+
+.headerText {
+    @apply text-xl lg:text-2xl text-white;
+}
+
+.headerCtaBlock {
+    @apply flex gap-6 lg:gap-12 px-2 mt-6 flex-wrap justify-center lg:justify-between;
+}
+
+.ctaBtn, .ctaBtnSecondary {
+    @apply px-8 py-4 text-white font-bold rounded-xl shadow border;
+    background: var(--primaryColor);
+    border-color: transparent;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.ctaBtn:hover {
+    background: var(--secondaryColor);
+}
+
+.ctaBtnSecondary {
+    border-color: var(--color-white);
+    background: transparent;
+
+    &:hover {
+        background: var(--color-white);
+        color: var(--primaryColor);
+    }
+}
+
+.headerIconBlock {
+    @apply flex gap-4 mx-auto w-full lg:w-1/2 justify-center overflow-hidden;
+}
+
+.headerImage {
+    top: -2rem;
+    left: -.5rem;
+    @apply w-full object-fill p-12 rounded-3xl shadow absolute lg:relative opacity-10 lg:opacity-100 lg:top-0 lg:left-0;
+    z-index: 0;
+    transform: rotateZ(10deg);
+}
+
+.globServiceBlock {
+    @apply flex flex-col gap-4 mb-32;
+}
+
+.globServiceHeader {
+    @apply flex flex-col items-center justify-center gap-2;
+}
+
+.globServiceCategory {
+    @apply text-sm px-4 py-1 text-white rounded-xl shadow w-fit;
+    background: var(--primaryColor);
+}
+
+.globServiceTitle {
+    @apply text-4xl px-4 py-2 font-bold mb-6;
+}
+
+.globServiceDescription {
+    @apply text-xl mb-6;
+    color: rgb(from var(--grayColor) r g b / 75%);
+}
+
+.globServiceWrapper {
+    @apply flex gap-4 flex-wrap justify-around mt-6;
+}
+
+.globServiceCard {
+    @apply flex flex-col gap-4 px-4 py-6 rounded-xl shadow border;
+    border-color: rgb(from var(--grayColor) r g b / 25%);
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.02) rotateZ(2deg);
+    }
+}
+
+.globServiceIcon {
+    @apply text-4xl text-white px-4 pb-2 pt-4 rounded-full shadow w-fit mx-auto;
+    color: var(--secondaryColor);
+    background: rgba(from var(--primaryColor) r g b / 10%);
+}
+
+.globServiceCardTitle {
+    @apply text-xl px-4 py-1 text-center font-light;
+}
+
+.globalServiceCardDesc {
+    @apply text-lg py-1 w-10/12 text-center mx-auto;
+    color: rgb(from var(--grayColor) r g b / 75%);
+}
+
+.globServiceCtaBlock {
+    @apply flex gap-6 px-2 mt-6 flex-wrap justify-center py-12 rounded-xl;
+    background: linear-gradient(25deg, var(--primaryColor), var(--secondaryColor));
+}
+
+.ctaGlobService {
+    @apply px-8 py-4 text-white font-bold rounded-xl shadow w-fit mx-auto border;
+    background: transparent;
+    border-color: var(--color-white);
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--color-white);
+        color: var(--primaryColor);
+    }
+}
+
+.formContainer {
+    @apply mt-0 lg:mt-20;
+}
+
+.aboutListBlock {
+    @apply flex flex-col gap-4 justify-center lg:w-1/2 mx-auto;
+}
+
+.aboutList {
+    @apply flex flex-col gap-4 flex-wrap justify-center;
+    list-style: none;
+}
+
+.aboutListItem {
+    @apply flex items-end gap-4 text-lg;
+    color: rgb(from var(--grayColor) r g b / 75%);
+}
+
+.aboutIcon {
+    @apply text-xl;
+    color: var(--primaryColor);
+}
+
+.aboutContent {
+    @apply flex flex-col lg:flex-row gap-4 justify-around;
+}
+
+.aboutFirstBlock {
+    @apply flex flex-col gap-4 lg:w-1/2 mx-auto justify-start mb-12 lg:mb-0;
+}
+
+.aboutFirstImage {
+    @apply mx-auto w-96 rounded-2xl;
+}
+
+.faqBlock {
+    @apply flex flex-col gap-4 mb-32;
+}
+
+.faqItem {
+    @apply border rounded-xl p-4;
+    border-color: rgb(from var(--grayColor) r g b / 25%);
+}
+
+.faqSummary {
+    @apply text-lg font-semibold cursor-pointer;
+}
+
+.faqAnswer {
+    @apply mt-2 text-base;
+    color: rgb(from var(--grayColor) r g b / 75%);
+}
+
+.headServiceCtaBlock {
+    @apply flex gap-6 px-2 mt-6 flex-wrap justify-center py-4 rounded-xl;
+    background: linear-gradient(25deg, var(--primaryColor), var(--secondaryColor));
+}

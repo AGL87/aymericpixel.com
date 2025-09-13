@@ -9,7 +9,7 @@ export default function FooterComponent(): ReactNode {
 			<div className={style.footerLinksContainer}>
 				<div className={style.footerCorporationWrapper}>
 					<div className={style.footerCorporationBlock}>
-						<Image className={style.footerLogo} src={"/assets/images/logo.svg"} alt={"Aymeric Pxiel - Développeur Web & Mobile : logo d'entreprise"} width={45} height={45} />
+						<Image className={style.footerLogo} src={"/assets/images/logo.webp"} alt={"Logo du développeur Aymeric Leger Achard"} width={45} height={45} />
 
 						<strong className={style.footerCorporationName}>Aymeric Pixel</strong>
 					</div>
@@ -25,27 +25,17 @@ export default function FooterComponent(): ReactNode {
 				</div>
 				<div className={style.footerLinksWrapper}>
 					<ul className={style.footerLinksList}>
-						<li>Services</li>
-						<li><Link href={""}>Développement web</Link></li>
-						<li><Link href={""}>Développement mobile</Link></li>
-						<li><Link href={""}>Gestion de projet</Link></li>
-						<li><Link href={""}>Tarifs</Link></li>
-					</ul>
-
-					<ul className={style.footerLinksList}>
 						<li>Liens utiles</li>
 						<li><Link href={"/"}>Accueil</Link></li>
-						<li><Link href={"/portfolio"}>Réalisatons</Link></li>
+						<li><Link href={"/portfolio"}>Réalisations</Link></li>
 						<li><Link href={"/process"}>Processus</Link></li>
 						<li><Link href={"/contact"}>Contact</Link></li>
 					</ul>
 
 					<ul className={style.footerLinksList}>
 						<li>Informations légales</li>
-						<li><Link href={"/legal/usage"}>Conditions générales d&#39;utilisation</Link></li>
 						<li><Link href={"/legal/seller"}>Conditions générales de vente</Link></li>
 						<li><Link href={"/legal/legal"}>Mentions légales</Link></li>
-						<li><Link href={"/legal/privacy"}>Politique de confidentialité</Link></li>
 					</ul>
 				</div>
 			</div>

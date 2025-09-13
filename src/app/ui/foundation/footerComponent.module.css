@@ -37,7 +37,7 @@
     li {
         &:first-of-type {
             font-family: var(--fontAccent), sans-serif;
-            @apply underline pb-4;
+            @apply pb-4;
         }
     }
 

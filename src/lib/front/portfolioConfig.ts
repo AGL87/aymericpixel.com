@@ -6,6 +6,7 @@ export interface PortfolioCardProps {
 	technologies: string[];
 	target?: string;
 	imageUrl: string;
+	imageAlt: string;
 }
 
 export const PORTFOLIO_WEB_CARDS: PortfolioCardProps[] = [
@@ -22,6 +23,7 @@ export const PORTFOLIO_WEB_CARDS: PortfolioCardProps[] = [
 		description: 'Plateforme de collecte de dons pour développer le mécénat et aider le financement d\'associations.',
 		type: 'WEB_DEV',
 		imageUrl: '/assets/images/portfolio/e-dons.webp',
+		imageAlt: 'Projet Edons, dans le but de la collecte de dons pour contribuer au mécénat. Développé en Symfony.',
 	},
 	{
 		isOnline: true,
@@ -37,6 +39,7 @@ export const PORTFOLIO_WEB_CARDS: PortfolioCardProps[] = [
 		description: 'API reliée à l\'application My Balances, pour retrouver un équilibre et son bien être.',
 		type: 'WEB_DEV',
 		imageUrl: '/assets/images/portfolio/my-balances.webp',
+		imageAlt: 'Projet My Balances, espace web pour l\'administration en Symfony, et API.',
 	},
 ]
 
@@ -54,5 +57,6 @@ export const PORTFOLIO_MOBILE_CARDS: PortfolioCardProps[] = [
 		description: 'Application de bien être, contenant podcasts et articles pour reprendre de bonne habitudes.',
 		type: 'MOBILE_APP',
 		imageUrl: '/assets/images/portfolio/my-balances.webp',
+		imageAlt: 'Projet My Balances, application mobile en Flutter, avec Firebase et connexion API.',
 	},
 ]

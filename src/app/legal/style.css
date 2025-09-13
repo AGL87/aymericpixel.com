@@ -30,6 +30,14 @@
 }
 
 .legal-page-item-content {
-    @apply text-sm;
+    @apply text-sm my-2;
     color: rgb(from var(--grayColor) r g b / 75%);
+}
+
+.legal-page-section {
+    @apply flex flex-col gap-6;
+}
+
+.legal-page-section-title {
+    @apply text-xl font-bold;
 }

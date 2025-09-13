@@ -1,8 +1,4 @@
-@reference '../globals.css';
-
-.contactPage {
-    @apply flex flex-col lg:flex-row md:gap-12;
-}
+@reference '../../globals.css';
 
 .contactInformationSection {
     @apply flex flex-col py-8 lg:max-w-1/3;

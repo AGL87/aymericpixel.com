@@ -12,7 +12,7 @@ export default function PortfolioCardComponent({props}: Readonly<{
 				<span className={style.cardHeaderItem}>{props.isOnline ? 'En ligne' : 'En développement'}</span>
 				<span className={style.cardHeaderItem}>{props.type === 'WEB_DEV' ? <i className={`${style.headerIcon} fi fi-rr-globe`}></i> :
 					<i className={`${style.headerIcon} fi fi-rr-mobile-notch`}></i>}</span>
-				<Image src={props.imageUrl} width={120} height={120} className={style.cardImage} alt={""} />
+				<Image src={props.imageUrl} width={120} height={120} className={style.cardImage} alt={props.imageAlt} />
 			</div>
 
 			<div className={style.cardContent}>

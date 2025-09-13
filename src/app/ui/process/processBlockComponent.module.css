@@ -1,0 +1,42 @@
+@reference '../../globals.css';
+
+.processLine {
+    @apply flex flex-col md:flex-row items-center gap-4 md:gap-12 w-10/12 justify-center mx-auto;
+}
+
+.processContent {
+    @apply flex flex-col gap-4 p-6 rounded-2xl border border-gray-300 shadow-md w-full;
+}
+
+.processTitle {
+    @apply text-xl font-bold;
+}
+
+.processDescription {
+    @apply text-xl mb-4;
+    color: rgb(from var(--grayColor) r g b / 75%);
+}
+
+.processList {
+    @apply flex flex-col gap-2;
+    list-style: none;
+}
+
+.processListItem {
+    @apply flex gap-4 text-lg;
+}
+
+.listIcon {
+    color: var(--primaryColor);
+    @apply text-xl;
+}
+
+.infoBlock {
+    @apply flex flex-col justify-center;
+}
+
+.identifier {
+    @apply flex flex-col px-10 py-8 text-white w-fit mx-auto text-2xl;
+    background: linear-gradient(25deg, var(--primaryColor), var(--secondaryColor));
+    border-radius: 50%;
+}

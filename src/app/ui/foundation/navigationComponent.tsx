@@ -29,7 +29,7 @@ export default function NavigationComponent(): ReactNode {
 				<Link href="/">
 					<Image
 						className={style.menuLogo}
-						src="/assets/images/logo.svg"
+						src="/assets/images/logo.webp"
 						alt="Aymeric Pxiel - Développeur Web & Mobile : logo d'entreprise"
 						width={75}
 						height={75}
