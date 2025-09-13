@@ -90,7 +90,7 @@
 }
 
 .globServiceCard {
-    @apply flex flex-col gap-4 px-4 py-6 rounded-xl shadow border;
+    @apply flex flex-col gap-4 px-4 py-6 rounded-xl shadow border lg:flex-1;
     border-color: rgb(from var(--grayColor) r g b / 25%);
     transition: transform 0.2s ease;
 
