@@ -52,7 +52,5 @@ export const metadata: Metadata = makePageMetadata({
 });
 
 export default function ContactPage() : ReactNode {
-	return (
-		<ContactPageUI />
-	)
+	return <ContactPageUI />
 }

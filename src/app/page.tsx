@@ -12,8 +12,8 @@ export const metadata: Metadata = makePageMetadata({
 });
 
 export default function Home() {
-  return <>
+  return (<>
 	  <HomePageUI />
 	  <FaqJsonLd />
-  </>;
+  </>);
 }

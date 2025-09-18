@@ -1,3 +1,5 @@
+"use client";
+
 import {ReactNode} from "react";
 import HeaderComponent from "@/aymericpixel/app/ui/foundation/heacerComponent";
 import ContactZoneComponent from "@/aymericpixel/app/ui/contact/contactZoneComponent";
