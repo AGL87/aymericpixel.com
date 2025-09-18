@@ -29,6 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${questrial.className} ${poppins.variable}`}>
+      <head>
+	      <Script id="google-tag-manager" strategy="beforeInteractive" async={true} src={"https://www.googletagmanager.com/gtag/js?id=G-E56H2F1B4R"} />
+	      <Script id={"google-analytics"} strategy="beforeInteractive">{`window.dataLayer = window.dataLayer || [];
+				  function gtag(){dataLayer.push(arguments);}
+				  gtag('js', new Date());
+				
+				  gtag('config', 'G-E56H2F1B4R');`}
+	      </Script>
+      </head>
       <body>
 	      <noscript
 		      dangerouslySetInnerHTML={{
@@ -36,14 +45,6 @@ export default function RootLayout({
 	            height="0" width="0" style="display:none;visibility:hidden"></iframe>`
 		      }}
 	      />
-
-	      <Script id="google-tag-manager" strategy="beforeInteractive" async={true} src={"https://www.googletagmanager.com/gtag/js?id=G-E56H2F1B4R"} />
-	      <Script id={"google-analytics"} strategy="beforeInteractive">{`window.dataLayer = window.dataLayer || [];
-				  function gtag(){dataLayer.push(arguments);}
-				  gtag('js', new Date());
-				
-				  gtag('config', 'G-E56H2F1B4R');`}
-				</Script>
 
         <NavigationComponent />
         <div className="superContainer">
