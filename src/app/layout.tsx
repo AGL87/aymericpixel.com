@@ -21,6 +21,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = baseMetadata;
+const GA_ID = "G-E56H2F1B4R";
 
 export default function RootLayout({
   children,
@@ -30,22 +31,29 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${questrial.className} ${poppins.variable}`}>
       <head>
-	      <Script id="google-tag-manager" async={true} src={"https://www.googletagmanager.com/gtag/js?id=G-E56H2F1B4R"} />
-	      <Script id={"google-analytics"}>{`window.dataLayer = window.dataLayer || [];
-				  function gtag(){dataLayer.push(arguments);}
-				  gtag('js', new Date());
-				
-				  gtag('config', 'G-E56H2F1B4R');`}
+	      <Script
+		      id="gtag-loader"
+		      src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+		      strategy="beforeInteractive"
+	      />
+	      <Script id="gtag-init" strategy="beforeInteractive">
+		      {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+
+            // (Facultatif mais propre) Consent Mode par défaut
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              wait_for_update: 500
+            });
+
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
 	      </Script>
       </head>
       <body>
-	      <noscript
-		      dangerouslySetInnerHTML={{
-			      __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZS3MVLG"
-	            height="0" width="0" style="display:none;visibility:hidden"></iframe>`
-		      }}
-	      />
-
         <NavigationComponent />
         <div className="superContainer">
 	        {children}
