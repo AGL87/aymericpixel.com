@@ -8,6 +8,7 @@ export default function PortfolioCardComponent({props}: Readonly<{
 }>) : ReactNode {
 	return (
 		<div className={style.card}>
+			{props.alternanceProject && <span className={style.alternanceProject}>Projet réalisé en alternance *</span>  }
 			<div className={style.cardHeader}>
 				<span className={style.cardHeaderItem}>{props.isOnline ? 'En ligne' : 'En développement'}</span>
 				<span className={style.cardHeaderItem}>{props.type === 'WEB_DEV' ? <i className={`${style.headerIcon} fi fi-rr-globe`}></i> :

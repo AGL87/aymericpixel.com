@@ -8,7 +8,7 @@ import style from './style.module.css';
 export default function PortfolioPageUI() : ReactNode {
 	return (
 		<>
-			<HeaderComponent title={'Mes réalisations'} subTitle={'Découvrez les projets web et mobile que j\'ai développés'} />
+			<HeaderComponent title={'Portfolio'} subTitle={'Découvrez les projets web et mobile sur lesquels j\'ai travaillé'} />
 
 			<BodyWrapperComponent>
 				<div className={style.cardsWrapper}>
@@ -22,6 +22,9 @@ export default function PortfolioPageUI() : ReactNode {
 							{PORTFOLIO_WEB_CARDS.map((card, index) => (
 								<PortfolioCardComponent key={`portfolio_web_${index}`} props={card} />
 							))}
+							{PORTFOLIO_WEB_CARDS.length === 0 && (
+								<p className={style.emptyCardsMessage}>Devenez le premier client à être affiché ici !</p>
+							)}
 						</div>
 					</section>
 
@@ -35,6 +38,9 @@ export default function PortfolioPageUI() : ReactNode {
 							{PORTFOLIO_MOBILE_CARDS.map((card, index) => (
 								<PortfolioCardComponent key={`portfolio_web_${index}`} props={card} />
 							))}
+							{PORTFOLIO_MOBILE_CARDS.length === 0 && (
+								<p className={style.emptyCardsMessage}>Devenez le premier client à être affiché ici !</p>
+							)}
 						</div>
 					</section>
 				</div>
@@ -45,6 +51,18 @@ export default function PortfolioPageUI() : ReactNode {
 				<p className={style.ctaDescription}>Discutons ensemble de vos besoins et créons quelque chose d&#39;exceptionnel</p>
 
 				<a href="/contact" className={style.ctaButton}>Démarrer mon projet</a>
+			</section>
+
+			<section className={style.legalSection}>
+				<p className={style.legalText}>
+					* Les projets réalisés en alternance ont été supervisés par l&#39;entreprise pour laquelle je travaillais durant mes études.
+					<br/>
+					Les propriétés intellectuelles reviennent à qui de droit.
+					<br />
+					Chaque projet mentionné, issu de l&#39;alternance, est en ligne et accessible publiquement.
+					<br />
+					Chaque projet est mentionné sur la base de l&#39;autorisation écrite des commanditaires.
+				</p>
 			</section>
 		</>
 	);

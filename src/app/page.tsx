@@ -7,7 +7,7 @@ import FaqJsonLd from "@/aymericpixel/lib/front/faqConfig";
 export const metadata: Metadata = makePageMetadata({
 	title: "Accueil",
 	description:
-		"Développeur freelance web & mobile, je crée vos apps sur mesure avec un suivi clair et des solutions performantes pour garantir le succès de votre projet.",
+		"Développeur freelance web & mobile sur Limoges, je crée vos apps sur mesure avec un suivi clair et des solutions performantes pour votre projet.",
 	path: "/",
 });
 

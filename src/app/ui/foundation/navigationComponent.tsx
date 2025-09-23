@@ -43,7 +43,7 @@ export default function NavigationComponent(): ReactNode {
 						<Link href="/" className={style.menuLink}>Accueil</Link>
 					</li>
 					<li>
-						<Link href="/portfolio" className={style.menuLink}>Réalisations</Link>
+						<Link href="/portfolio" className={style.menuLink}>Portfolio</Link>
 					</li>
 					<li>
 						<Link href="/process" className={style.menuLink}>Processus</Link>

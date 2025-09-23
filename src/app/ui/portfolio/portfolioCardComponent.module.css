@@ -66,3 +66,9 @@
     transform: translateX(-50%);
     z-index: -1;
 }
+
+.alternanceProject {
+    @apply flex justify-center rounded-md p-2 mb-4;
+    background: var(--primaryColor);
+    color: var(--color-white);
+}

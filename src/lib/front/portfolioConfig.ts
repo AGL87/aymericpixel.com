@@ -7,6 +7,7 @@ export interface PortfolioCardProps {
 	target?: string;
 	imageUrl: string;
 	imageAlt: string;
+	alternanceProject?: boolean;
 }
 
 export const PORTFOLIO_WEB_CARDS: PortfolioCardProps[] = [
@@ -24,39 +25,9 @@ export const PORTFOLIO_WEB_CARDS: PortfolioCardProps[] = [
 		type: 'WEB_DEV',
 		imageUrl: '/assets/images/portfolio/e-dons.webp',
 		imageAlt: 'Projet Edons, dans le but de la collecte de dons pour contribuer au mécénat. Développé en Symfony.',
-	},
-	{
-		isOnline: true,
-		title: 'My Balances',
-		target: 'https://my-balances.com',
-		technologies: [
-			'PHP',
-			'Symfony',
-			'MySQL',
-			'Administration',
-			'API'
-		],
-		description: 'API reliée à l\'application My Balances, pour retrouver un équilibre et son bien être.',
-		type: 'WEB_DEV',
-		imageUrl: '/assets/images/portfolio/my-balances.webp',
-		imageAlt: 'Projet My Balances, espace web pour l\'administration en Symfony, et API.',
+		alternanceProject: true,
 	},
 ]
 
 export const PORTFOLIO_MOBILE_CARDS: PortfolioCardProps[] = [
-	{
-		isOnline: true,
-		title: 'My Balances',
-		target: 'https://my-balances.com',
-		technologies: [
-			'Flutter',
-			'Firebase',
-			'API',
-			'Achats In-app',
-		],
-		description: 'Application de bien être, contenant podcasts et articles pour reprendre de bonne habitudes.',
-		type: 'MOBILE_APP',
-		imageUrl: '/assets/images/portfolio/my-balances.webp',
-		imageAlt: 'Projet My Balances, application mobile en Flutter, avec Firebase et connexion API.',
-	},
 ]

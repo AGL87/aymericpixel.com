@@ -4,9 +4,9 @@ import {makePageMetadata} from "@/aymericpixel/lib/seo/seoConfig";
 import {Metadata} from "next";
 
 export const metadata: Metadata = makePageMetadata({
-	title: "Mes réalisations",
+	title: "Mon portfolio",
 	description:
-		"Développeur freelance web & mobile, je crée vos apps sur mesure avec un suivi clair et des solutions performantes pour garantir le succès de votre projet.",
+		"Développeur freelance web & mobile à Limoges. Applications sur mesure, performantes et adaptées à vos besoins. Découvrez mon portfolio !",
 	path: "/portfolio",
 	keywords: [
 		"portfolio freelance",
