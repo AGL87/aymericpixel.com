@@ -50,6 +50,10 @@
     @apply flex justify-center pt-6;
 }
 
+.targetContainer2 {
+    @apply justify-between;
+}
+
 .target {
     @apply flex items-center px-4 py-2 rounded text-white;
     background: var(--primaryColor);
@@ -61,7 +65,9 @@
 }
 
 .cardImage {
-    @apply w-32 h-32 object-cover absolute rounded-2xl;
+    @apply object-fill absolute rounded-2xl;
+    width: 120px;
+    height: 120px;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
@@ -71,4 +77,13 @@
     @apply flex justify-center rounded-md p-2 mb-4;
     background: var(--primaryColor);
     color: var(--color-white);
+}
+
+.noAlternanceProject {
+    @apply flex justify-center rounded-md p-2 mb-4;
+    color: var(--color-white);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

@@ -9,6 +9,7 @@ export default function PortfolioCardComponent({props}: Readonly<{
 	return (
 		<div className={style.card}>
 			{props.alternanceProject && <span className={style.alternanceProject}>Projet réalisé en alternance *</span>  }
+			{!props.alternanceProject && <span className={style.noAlternanceProject}>Projet Aymeric Pixel</span>  }
 			<div className={style.cardHeader}>
 				<span className={style.cardHeaderItem}>{props.isOnline ? 'En ligne' : 'En développement'}</span>
 				<span className={style.cardHeaderItem}>{props.type === 'WEB_DEV' ? <i className={`${style.headerIcon} fi fi-rr-globe`}></i> :
@@ -25,8 +26,16 @@ export default function PortfolioCardComponent({props}: Readonly<{
 					))}
 				</div>
 				{props.target &&
-            <div className={style.targetContainer}>
-                <a href={props.target} target="_blank" className={style.target}>Voir le projet</a>
+            <div className={`${style.targetContainer} ${props.target2 ? style.targetContainer2 : ''}`}>
+                <a href={props.target} target="_blank" className={style.target}>
+	                {props.target2 ? 'App Android' : 'Voir le projet'}
+                </a>
+
+		            {props.target2 && (
+									  <a href={props.target2} target="_blank" className={style.target}>
+                      App iOS
+                    </a>
+		            )}
             </div>
 				}
 			</div>
