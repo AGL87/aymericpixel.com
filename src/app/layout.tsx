@@ -21,7 +21,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = baseMetadata;
-const GA_ID = "G-E56H2F1B4R";
+const GA_ID = "GTM-5ZS3MVLG";
 
 export default function RootLayout({
   children,
