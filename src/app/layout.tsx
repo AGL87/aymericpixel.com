@@ -6,7 +6,7 @@ import FooterComponent from "@/aymericpixel/app/ui/foundation/footerComponent";
 import {ReactNode} from "react";
 import SeoJsonLd from "@/aymericpixel/lib/seo/seoJsonLd";
 import {baseMetadata} from "@/aymericpixel/lib/seo/seoConfig";
-import Script from "next/script";
+import {GoogleTagManager} from "@next/third-parties/google";
 
 const questrial = Questrial({
   variable: "--font-questrial",
@@ -30,29 +30,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${questrial.className} ${poppins.variable}`}>
-      <head>
-	      <Script
-		      id="gtag-loader"
-		      src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-		      strategy="beforeInteractive"
-	      />
-	      <Script id="gtag-init" strategy="beforeInteractive">
-		      {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-
-            // (Facultatif mais propre) Consent Mode par défaut
-            gtag('consent', 'default', {
-              ad_storage: 'denied',
-              analytics_storage: 'denied',
-              wait_for_update: 500
-            });
-
-            gtag('js', new Date());
-            gtag('config', '${GA_ID}');
-          `}
-	      </Script>
-      </head>
       <body>
         <NavigationComponent />
         <div className="superContainer">
@@ -61,6 +38,8 @@ export default function RootLayout({
         <FooterComponent />
         <SeoJsonLd />
       </body>
+
+      <GoogleTagManager gtmId={GA_ID}/>
     </html>
   );
 }
