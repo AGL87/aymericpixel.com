@@ -6,7 +6,7 @@ import FooterComponent from "@/aymericpixel/app/ui/foundation/footerComponent";
 import {ReactNode} from "react";
 import SeoJsonLd from "@/aymericpixel/lib/seo/seoJsonLd";
 import {baseMetadata} from "@/aymericpixel/lib/seo/seoConfig";
-import {GoogleTagManager} from "@next/third-parties/google";
+import {GoogleAnalytics, GoogleTagManager} from "@next/third-parties/google";
 
 const questrial = Questrial({
   variable: "--font-questrial",
@@ -22,6 +22,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = baseMetadata;
 const GA_ID = "GTM-5ZS3MVLG";
+const GM_ID = "G-ZPHD0DB5PY";
 
 export default function RootLayout({
   children,
@@ -40,6 +41,7 @@ export default function RootLayout({
       </body>
 
       <GoogleTagManager gtmId={GA_ID}/>
+      <GoogleAnalytics gaId={GM_ID} />
     </html>
   );
 }
