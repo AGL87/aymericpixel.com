@@ -83,7 +83,7 @@ export default function NavigationComponent(): ReactNode {
 						<Link href="/" className={style.mobileNavLink} onClick={() => setOpen(false)}>Accueil</Link>
 					</li>
 					<li>
-						<Link href="/projects" className={style.mobileNavLink} onClick={() => setOpen(false)}>Réalisations</Link>
+						<Link href="/portfolio" className={style.mobileNavLink} onClick={() => setOpen(false)}>Réalisations</Link>
 					</li>
 					<li>
 						<Link href="/process" className={style.mobileNavLink} onClick={() => setOpen(false)}>Processus</Link>
