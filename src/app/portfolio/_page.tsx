@@ -52,18 +52,6 @@ export default function PortfolioPageUI() : ReactNode {
 
 				<a href="/contact" className={style.ctaButton}>Démarrer mon projet</a>
 			</section>
-
-			<section className={style.legalSection}>
-				<p className={style.legalText}>
-					* Les projets réalisés en alternance ont été supervisés par l&#39;entreprise pour laquelle je travaillais durant mes études.
-					<br/>
-					Les propriétés intellectuelles reviennent à qui de droit.
-					<br />
-					Chaque projet mentionné, issu de l&#39;alternance, est en ligne et accessible publiquement.
-					<br />
-					Chaque projet est mentionné sur la base de l&#39;autorisation écrite des commanditaires.
-				</p>
-			</section>
 		</>
 	);
 }

@@ -26,7 +26,7 @@ export const PORTFOLIO_WEB_CARDS: PortfolioCardProps[] = [
 		imageUrl: '/assets/images/portfolio/vivezlocal.svg',
 		imageAlt: 'Plateforme Next.js & Nest.js pour booster le pouvoir d\'achat des utilisateurs et leur permettre de profiter de réductions locales.',
 	},
-	{
+	/*{
 		isOnline: true,
 		title: 'Edons',
 		target: 'https://e-dons.fr',
@@ -56,7 +56,7 @@ export const PORTFOLIO_WEB_CARDS: PortfolioCardProps[] = [
 		imageUrl: '/assets/images/portfolio/my-balances.webp',
 		imageAlt: 'Plateforme administratrice du application mobile pour le bien-être pour les parents.',
 		alternanceProject: true,
-	},
+	},*/
 ]
 
 export const PORTFOLIO_MOBILE_CARDS: PortfolioCardProps[] = [
@@ -74,7 +74,7 @@ export const PORTFOLIO_MOBILE_CARDS: PortfolioCardProps[] = [
 		imageUrl: '/assets/images/portfolio/zest-challenge.png',
 		imageAlt: 'Application mobile Flutter, pour casser un peu le quotidien.',
 	},
-	{
+	/*{
 		isOnline: true,
 		title: 'My Balances',
 		target: 'https://play.google.com/store/apps/details?id=com.mybalances.mybalances',
@@ -105,5 +105,5 @@ export const PORTFOLIO_MOBILE_CARDS: PortfolioCardProps[] = [
 		imageUrl: '/assets/images/portfolio/prevenmain.png',
 		imageAlt: 'App mobile pour découvrir à travers des jeux, les risques des métiers manuels.',
 		alternanceProject: true,
-	},
+	},*/
 ]

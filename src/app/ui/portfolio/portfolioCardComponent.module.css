@@ -65,7 +65,7 @@
 }
 
 .cardImage {
-    @apply object-fill absolute rounded-2xl;
+    @apply object-fill absolute rounded-2xl mt-6;
     width: 120px;
     height: 120px;
     left: 50%;
