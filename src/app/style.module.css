@@ -124,6 +124,19 @@
     background: #ffffff;
 }
 
+.ctaEcho {
+    @apply px-8 py-4 text-white font-bold rounded-xl shadow w-fit mx-auto border;
+    background: var(--primaryColor);
+    border-color: transparent;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--secondaryColor);
+        color: var(--color-white);
+    }
+}
+
 .ctaGlobService {
     @apply px-8 py-4 text-white font-bold rounded-xl shadow w-fit mx-auto border;
     background: transparent;

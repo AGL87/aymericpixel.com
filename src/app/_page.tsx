@@ -124,14 +124,14 @@ export default function HomePageUI() : ReactNode {
 									</li>
 									<li className={style.echoPriceHighlightItem}>
 										<span className={style.echoPriceCheckmark}>✓</span>
-										<span>1 an d&#39;hébergement</span>
+										<span>Conception sur-mesure</span>
 									</li>
 								</ul>
 
 								{/* Renewal Info */}
 								<div className={style.echoPriceRenewal}>
 									<p className={style.echoPriceRenewalText}>
-										<strong>Puis</strong> 469€/an pour l&#39;hébergement
+										<strong>+</strong> 469€/an pour l&#39;hébergement
 									</p>
 								</div>
 
