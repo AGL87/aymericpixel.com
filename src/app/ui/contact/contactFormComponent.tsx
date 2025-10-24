@@ -7,11 +7,16 @@ import style from "./contactFormComponent.module.css";
 type Field = "firstname" | "lastname" | "devType" | "subject" | "project" | "email" | "phone";
 type FieldErrors = Partial<Record<Field, string>>;
 
-export default function ContactFormComponent() {
+interface Props {
+	preValue?: string;
+}
+
+export default function ContactFormComponent(props: Props) {
 	const [errors, setErrors] = useState<FieldErrors>({});
 	const [globalMsg, setGlobalMsg] = useState<string | null>(null);
 	const [successMsg, setSuccessMsg] = useState<string | null>(null);
 	const [loading, setLoading] = useState(false);
+	const [devType, setDevType] = useState(props.preValue ?? "");
 
 	async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
@@ -129,8 +134,11 @@ export default function ContactFormComponent() {
 						required
 						options={[
 							{ label: "Développement web", value: "__web_dev__" },
-							{ label: "Développement mobile", value: "__mobile_dev__" }
+							{ label: "Développement mobile", value: "__mobile_dev__" },
+							{ label: "Solution Echo", value: "__product_echo__" }
 						]}
+						value={devType}
+						onChange={(value) => setDevType(value)}
 					/>
 					{errors.devType && <p className={style.fieldError}>{errors.devType}</p>}
 				</div>

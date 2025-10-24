@@ -54,8 +54,12 @@ export async function POST(req: NextRequest) {
 		}
 	}
 
+	const validProjects = [
+		"__web_dev__", "__mobile_dev__", "__product_echo__"
+	];
+
 	if (!devType) errors.devType = "Type de projet requis.";
-	else if (!["__web_dev__", "__mobile_dev__"].includes(devType)) errors.devType = "Type de projet invalide.";
+	else if (!validProjects.includes(devType)) errors.devType = "Type de projet invalide.";
 	if (!subject) errors.subject = "Sujet requis.";
 	else if (subject.length > 100) errors.subject = "Sujet trop long (100 caractères max).";
 	if (!project || project.length < 10) errors.project = "Décrivez brièvement votre projet (≥ 10 caractères).";
@@ -67,7 +71,7 @@ export async function POST(req: NextRequest) {
 		);
 	}
 
-	const devTypeLabel = devType === "__web_dev__" ? "Développement web" : "Développement mobile";
+	const devTypeLabel = devType === "__web_dev__" ? "Développement web" : devType === "__mobile_dev__" ? "Développement mobile" : "[ECHO]";
 	const fullName = `${firstname} ${lastname}`.trim();
 	const contactLines = [
 		`Nom : ${fullName}`,

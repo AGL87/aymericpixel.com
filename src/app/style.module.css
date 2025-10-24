@@ -119,6 +119,11 @@
     background: linear-gradient(25deg, var(--primaryColor), var(--secondaryColor));
 }
 
+.globServiceCtaBlockWB {
+    @apply flex gap-6 px-2 mt-6 flex-wrap justify-center py-12 rounded-xl;
+    background: #ffffff;
+}
+
 .ctaGlobService {
     @apply px-8 py-4 text-white font-bold rounded-xl shadow w-fit mx-auto border;
     background: transparent;
@@ -188,4 +193,192 @@
 .headServiceCtaBlock {
     @apply flex gap-6 px-2 mt-6 flex-wrap justify-center py-4 rounded-xl;
     background: linear-gradient(25deg, var(--primaryColor), var(--secondaryColor));
+}
+
+/* Echo Section - Distinctive Styling */
+.echoSection {
+    @apply px-4 py-16 sm:px-6 lg:px-8 relative mb-12;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+    border-top: 3px solid rgb(59, 130, 246);
+    border-bottom: 3px solid rgb(139, 92, 246);
+    position: relative;
+}
+
+.echoBadge {
+    @apply inline-block px-4 py-2 mb-6 text-sm font-bold rounded-full;
+    background: linear-gradient(135deg, rgb(59, 130, 246) 0%, rgb(139, 92, 246) 100%);
+    color: white;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.echoContentWrapper {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-8 items-center mt-12;
+}
+
+.echoPriceBox {
+    @apply lg:col-span-1 flex justify-center items-center;
+}
+
+.echoPriceContent {
+    @apply bg-white rounded-xl shadow-2xl p-8 text-center border-2 border-blue-500 relative overflow-hidden w-full;
+    background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+    transition: all 0.3s ease;
+}
+
+.echoPriceContent:hover {
+    @apply shadow-2xl;
+    transform: translateY(-8px);
+    border-color: rgb(139, 92, 246);
+}
+
+/* Badge "Nouveau" */
+.echoPriceBadge {
+    @apply inline-block px-4 py-1 rounded-full text-sm font-bold mb-4;
+    background: linear-gradient(135deg, rgb(59, 130, 246) 0%, rgb(139, 92, 246) 100%);
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* Label */
+.echoPriceLabel {
+    @apply text-xs font-semibold text-gray-600 uppercase tracking-widest;
+    letter-spacing: 0.1em;
+}
+
+/* Price Wrapper */
+.echoPriceWrapper {
+    @apply flex items-baseline justify-center gap-2 mt-4 mb-6;
+}
+
+.echoPriceAmount {
+    @apply text-6xl font-black;
+    background: linear-gradient(135deg, rgb(59, 130, 246) 0%, rgb(139, 92, 246) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.echoPriceCurrency {
+    @apply text-lg font-semibold text-gray-600;
+    margin-bottom: 8px;
+}
+
+/* Highlights List */
+.echoPriceHighlights {
+    @apply list-none p-0 m-0 space-y-3 my-6 text-left;
+}
+
+.echoPriceHighlightItem {
+    @apply flex items-center gap-3 text-sm text-gray-700;
+}
+
+.echoPriceCheckmark {
+    @apply flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center font-bold text-white text-xs;
+    background: linear-gradient(135deg, rgb(59, 130, 246) 0%, rgb(139, 92, 246) 100%);
+}
+
+/* Renewal Info */
+.echoPriceRenewal {
+    @apply bg-blue-50 rounded-lg p-3 my-6 border border-blue-200;
+}
+
+.echoPriceRenewalText {
+    @apply text-xs text-gray-700;
+}
+
+.echoPriceRenewalText strong {
+    @apply text-blue-600 font-semibold;
+}
+
+/* CTA Button */
+.echoPriceButton {
+    @apply w-full px-6 py-3 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2;
+    background: linear-gradient(135deg, rgb(59, 130, 246) 0%, rgb(139, 92, 246) 100%);
+    color: white;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.echoPriceButton:hover {
+    @apply shadow-lg;
+    transform: scale(1.05);
+}
+
+.echoPriceButton:active {
+    transform: scale(0.98);
+}
+
+.echoPriceButtonArrow {
+    @apply transition-transform duration-300;
+    display: inline-block;
+}
+
+.echoPriceButton:hover .echoPriceButtonArrow {
+    transform: translateX(4px);
+}
+
+/* Trust Signal */
+.echoPriceTrust {
+    @apply text-xs text-gray-600 flex items-center justify-center gap-2;
+}
+
+.echoPriceTrustIcon {
+    @apply text-green-500;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .echoContentWrapper {
+        @apply grid-cols-1;
+    }
+
+    .echoPriceBox {
+        @apply lg:col-span-1;
+    }
+
+    .echoPriceContent {
+        max-width: 100%;
+    }
+
+    .echoPriceAmount {
+        @apply text-5xl;
+    }
+}
+
+@media (max-width: 640px) {
+    .echoPriceContent {
+        @apply p-6;
+    }
+
+    .echoPriceAmount {
+        @apply text-4xl;
+    }
+
+    .echoPriceHighlights {
+        @apply space-y-2;
+    }
+
+    .echoPriceHighlightItem {
+        @apply text-xs;
+    }
 }

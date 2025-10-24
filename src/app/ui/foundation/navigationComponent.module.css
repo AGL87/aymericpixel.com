@@ -95,3 +95,92 @@
 .mobileNavLink:hover {
     @apply bg-gray-900 text-white;
 }
+
+/* Desktop Dropdown */
+.menuDropdown {
+    @apply flex items-center gap-2 mt-auto;
+    position: relative;
+}
+
+.dropdownIcon {
+    @apply mt-auto block;
+    font-size: 0.875rem;
+    transition: transform 0.2s ease;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0.5rem 0 0 0;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    z-index: 1000;
+}
+
+.dropdownMenu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdownLink {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: inherit;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.dropdownLink:hover {
+    background-color: #f3f4f6;
+}
+
+/* Mobile Dropdown */
+.mobileMenuDropdown {
+    position: relative;
+}
+
+.mobileDropdownIcon {
+    font-size: 0.875rem;
+    transition: transform 0.2s ease;
+}
+
+.mobileMenuDropdown > button[aria-expanded="true"] .mobileDropdownIcon {
+    transform: rotate(180deg);
+}
+
+.mobileDropdownMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+}
+
+.mobileDropdownMenu.open {
+    max-height: 500px;
+}
+
+.mobileDropdownLink {
+    display: block;
+    padding: 0.5rem 0;
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease;
+}
+
+.mobileDropdownLink:hover {
+    opacity: 0.7;
+}

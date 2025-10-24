@@ -1,0 +1,379 @@
+
+@reference "../../globals.css";
+
+/* Hero Section */
+.heroSection {
+  @apply px-4 py-16 sm:px-6 lg:px-8;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.heroContent {
+  @apply text-center mb-12;
+}
+
+.heroTitle {
+  @apply text-4xl sm:text-5xl font-bold text-slate-900 mb-4;
+  font-family: var(--fontAccent), sans-serif;
+}
+
+.heroSubtitle {
+  @apply text-xl text-slate-600 mb-6;
+}
+
+.heroDescription {
+  @apply text-lg text-slate-500 max-w-2xl mx-auto;
+}
+
+/* Price Card */
+.priceCard {
+  @apply bg-white rounded-lg shadow-lg p-8 max-w-md mx-auto mb-12;
+  border: 2px solid var(--primaryColor);
+}
+
+.priceCardContent {
+  @apply text-center;
+}
+
+.priceLabel {
+  @apply text-slate-600 mb-2;
+}
+
+.priceAmount {
+  @apply text-5xl font-bold text-slate-900 mb-2;
+  font-family: var(--fontAccent), sans-serif;
+}
+
+.priceCurrency {
+  @apply text-slate-500 mb-4;
+}
+
+.priceNote {
+  @apply text-sm text-slate-600 mb-6;
+}
+
+.priceButton {
+  @apply w-full font-semibold py-3 px-6 rounded-lg transition-colors;
+  background-color: var(--primaryColor);
+  color: white;
+}
+
+.priceButton:hover {
+  @apply opacity-90;
+}
+
+/* Features Section */
+.featuresSection {
+  @apply px-4 py-16 sm:px-6 lg:px-8 bg-slate-50;
+}
+
+.featuresSectionContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.featuresTitle {
+  @apply text-3xl font-bold text-slate-900 mb-12 text-center;
+  font-family: var(--fontAccent), sans-serif;
+}
+
+.featuresGrid {
+  @apply grid md:grid-cols-2 gap-8;
+}
+
+.featureCard {
+  @apply bg-white rounded-lg p-6 shadow;
+}
+
+.featureCardTitle {
+  @apply text-xl font-semibold text-slate-900 mb-3;
+  font-family: var(--fontAccent), sans-serif;
+}
+
+.featureCardList {
+  @apply text-slate-600 space-y-2;
+}
+
+.featureCardListItem {
+  @apply text-base;
+}
+
+.featureCardDescription {
+  @apply text-slate-600;
+}
+
+/* For Whom Section */
+.forWhomSection {
+  @apply px-4 py-16 sm:px-6 lg:px-8;
+}
+
+.forWhomContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.forWhomTitle {
+  @apply text-3xl font-bold text-slate-900 mb-12 text-center;
+  font-family: var(--fontAccent), sans-serif;
+}
+
+.forWhomGrid {
+  @apply grid md:grid-cols-2 gap-8;
+}
+
+.forWhomCard {
+  @apply rounded-lg p-8;
+  background-color: rgba(var(--primaryColor-rgb), 0.05);
+  border-left: 4px solid var(--primaryColor);
+}
+
+.forWhomCardTitle {
+  @apply text-2xl font-semibold text-slate-900 mb-4;
+  font-family: var(--fontAccent), sans-serif;
+}
+
+.forWhomCardDescription {
+  @apply text-slate-600;
+}
+
+/* CTA Section */
+.ctaSection {
+  @apply px-4 py-16 sm:px-6 lg:px-8;
+  background: linear-gradient(135deg, var(--primaryColor) 0%, var(--secondaryColor) 100%);
+}
+
+.ctaContainer {
+  max-width: 896px;
+  margin: 0 auto;
+  @apply text-center;
+}
+
+.ctaTitle {
+  @apply text-3xl font-bold text-white mb-6;
+  font-family: var(--fontAccent), sans-serif;
+}
+
+.ctaDescription {
+  @apply text-lg mb-8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ctaButton {
+  @apply bg-white font-semibold py-3 px-8 rounded-lg transition-colors text-lg;
+  color: var(--primaryColor);
+}
+
+.ctaButton:hover {
+  @apply bg-slate-100;
+}
+
+/* FAQ Section */
+.faqSection {
+  @apply px-4 py-16 sm:px-6 lg:px-8 bg-slate-50;
+}
+
+.faqContainer {
+  max-width: 896px;
+  margin: 0 auto;
+}
+
+.faqTitle {
+  @apply text-3xl font-bold text-slate-900 mb-12 text-center;
+  font-family: var(--fontAccent), sans-serif;
+}
+
+.faqList {
+  @apply space-y-6;
+}
+
+.faqItem {
+  @apply bg-white rounded-lg p-6 shadow cursor-pointer;
+}
+
+.faqSummary {
+  @apply font-semibold text-slate-900 flex justify-between items-center;
+  font-family: var(--fontAccent), sans-serif;
+}
+
+.faqSummary:hover {
+  @apply text-slate-700;
+}
+
+.faqToggle {
+  @apply transition-transform;
+}
+
+.faqToggle.open {
+  @apply rotate-180;
+}
+
+.faqAnswer {
+  @apply text-slate-600 mt-4;
+}
+
+/* Comparison Section */
+.comparisonSection {
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+.comparisonContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.comparisonTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.comparisonSubtitle {
+    font-size: 1.125rem;
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 3rem;
+}
+
+.comparisonGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.comparisonCard {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.comparisonCardHighlight {
+    border: 2px solid var(--primaryColor);
+    box-shadow: 0 2px 11px var(--primaryColor);
+    transform: scale(1.05);
+}
+
+.comparisonBadge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primaryColor);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.comparisonCardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--primaryColor);
+}
+
+.comparisonCardList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.comparisonCardListItem {
+    padding: 0.75rem 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+.comparisonCardCost {
+    background: rgba(var(--primaryColor-rgb), 0.05);
+    border-left: 3px solid var(--primaryColor);
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.comparisonCardCostLabel {
+    display: block;
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.comparisonCardCostAmount {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primaryColor);
+}
+
+.comparisonButton {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background: var(--primaryColor);
+    color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.comparisonButton:hover {
+    background: var(--primaryColor);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroTitle {
+    @apply text-3xl;
+  }
+
+  .heroSubtitle {
+    @apply text-lg;
+  }
+
+  .featuresTitle,
+  .forWhomTitle,
+  .ctaTitle,
+  .faqTitle {
+    @apply text-2xl;
+  }
+
+  .forWhomCardTitle {
+    @apply text-xl;
+  }
+
+  .priceCard {
+    @apply p-6;
+  }
+
+  .priceAmount {
+    @apply text-4xl;
+  }
+
+  .comparisonTitle {
+    font-size: 1.875rem;
+  }
+
+  .comparisonCardHighlight {
+    transform: scale(1);
+  }
+
+  .comparisonGrid {
+    gap: 1.5rem;
+  }
+}
+
+.FormContent {
+    @apply mx-4 lg:mx-12 py-12;
+}

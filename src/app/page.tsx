@@ -5,7 +5,7 @@ import {Metadata} from "next";
 import FaqJsonLd from "@/aymericpixel/lib/front/faqConfig";
 
 export const metadata: Metadata = makePageMetadata({
-	title: "Accueil",
+	title: "Développeur freelance web & mobile Limoges",
 	description:
 		"Développeur freelance web & mobile sur Limoges, je crée vos apps sur mesure avec un suivi clair et des solutions performantes pour votre projet.",
 	path: "/",

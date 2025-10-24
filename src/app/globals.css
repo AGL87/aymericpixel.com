@@ -9,6 +9,7 @@
     --grayColor: #676767;
 
     --fontAccent: var(--font-poppins);
+    scroll-behavior: smooth;
 }
 
 @theme inline {
@@ -20,7 +21,6 @@
 }
 
 body {
-
 }
 
 a, p, b, strong, i, em, span, strong, ul, li, ol, dd, dt {

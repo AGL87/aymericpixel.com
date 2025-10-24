@@ -63,6 +63,98 @@ export default function HomePageUI() : ReactNode {
 					</div>
 				</section>
 
+				{/* Echo - New Service Section - DISTINCTIVE */}
+				<section className={style.echoSection}>
+					<div className={style.echoBadge}>✨ NOUVEAU</div>
+
+					<div className={style.globServiceHeader}>
+						<strong className={style.globServiceCategory}>Solution rapide & abordable</strong>
+						<h3 className={style.globServiceTitle}>Echo - Site vitrine clé en main en 72h</h3>
+						<p className={style.globServiceDescription}>Vous avez besoin d&#39;un site professionnel rapidement ? Echo est la solution idéale pour les startups et TPE/PME qui veulent tester un marché sans investissement lourd.</p>
+					</div>
+
+					<div className={style.echoContentWrapper}>
+						<div className={style.globServiceWrapper}>
+							<div className={style.globServiceCard}>
+								<i className={`fi fi-rr-clock ${style.globServiceIcon}`}></i>
+								<h4 className={style.globServiceCardTitle}>Livraison rapide</h4>
+								<p className={style.globalServiceCardDesc}>72h après validation de la conception graphique</p>
+							</div>
+
+							<div className={style.globServiceCard}>
+								<i className={`fi fi-rr-euro ${style.globServiceIcon}`}></i>
+								<h4 className={style.globServiceCardTitle}>Prix transparent</h4>
+								<p className={style.globalServiceCardDesc}>750€ TTC tout compris, sans surcoûts cachés</p>
+							</div>
+
+							<div className={style.globServiceCard}>
+								<i className={`fi fi-rr-shield-check ${style.globServiceIcon}`}></i>
+								<h4 className={style.globServiceCardTitle}>Tout inclus</h4>
+								<p className={style.globalServiceCardDesc}>Gestion de projet, design, SEO, hébergement 1 an</p>
+							</div>
+						</div>
+
+						<div className={style.echoPriceBox}>
+							<div className={style.echoPriceContent}>
+								{/* Badge "Nouveau" */}
+								<div className={style.echoPriceBadge}>✨ NOUVEAU</div>
+
+								{/* Label */}
+								<p className={style.echoPriceLabel}>Investissement unique</p>
+
+								{/* Price */}
+								<div className={style.echoPriceWrapper}>
+									<span className={style.echoPriceAmount}>750€</span>
+									<span className={style.echoPriceCurrency}>TTC</span>
+								</div>
+
+								{/* Highlights */}
+								<ul className={style.echoPriceHighlights}>
+									<li className={style.echoPriceHighlightItem}>
+										<span className={style.echoPriceCheckmark}>✓</span>
+										<span>Livraison en 72h</span>
+									</li>
+									<li className={style.echoPriceHighlightItem}>
+										<span className={style.echoPriceCheckmark}>✓</span>
+										<span>Design professionnel</span>
+									</li>
+									<li className={style.echoPriceHighlightItem}>
+										<span className={style.echoPriceCheckmark}>✓</span>
+										<span>SEO optimisé</span>
+									</li>
+									<li className={style.echoPriceHighlightItem}>
+										<span className={style.echoPriceCheckmark}>✓</span>
+										<span>1 an d&#39;hébergement</span>
+									</li>
+								</ul>
+
+								{/* Renewal Info */}
+								<div className={style.echoPriceRenewal}>
+									<p className={style.echoPriceRenewalText}>
+										<strong>Puis</strong> 469€/an pour l&#39;hébergement
+									</p>
+								</div>
+
+								{/* CTA Button */}
+								<a href="/solutions/echo" className={style.echoPriceButton}>
+									Découvrir Echo
+									<span className={style.echoPriceButtonArrow}>→</span>
+								</a>
+
+								{/* Trust Signal */}
+								<p className={style.echoPriceTrust}>
+									<i className={`fi fi-rr-shield-check ${style.echoPriceTrustIcon}`}></i>
+									Garantie satisfaction 30 jours
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div className={style.globServiceCtaBlockWB}>
+						<a href="/solutions/echo" className={style.ctaEcho}>En savoir plus sur Echo</a>
+					</div>
+				</section>
+
 				<section className={style.globServiceBlock}>
 					<div className={style.globServiceHeader}>
 						<strong className={style.globServiceCategory}>Développement web</strong>

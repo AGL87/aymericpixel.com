@@ -33,6 +33,11 @@ export default function FooterComponent(): ReactNode {
 					</ul>
 
 					<ul className={style.footerLinksList}>
+						<li>Mes solutions</li>
+						<li><Link href={"/solutions/echo"}>Echo</Link></li>
+					</ul>
+
+					<ul className={style.footerLinksList}>
 						<li>Informations légales</li>
 						<li><Link href={"/legal/seller"}>Conditions générales de vente</Link></li>
 						<li><Link href={"/legal/legal"}>Mentions légales</Link></li>
