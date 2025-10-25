@@ -1,0 +1,355 @@
+
+@reference '../globals.css';
+
+/* Hero Section */
+.heroSection {
+    @apply py-12 md:py-16 px-4 text-center;
+}
+
+.heroContent {
+    @apply max-w-3xl mx-auto;
+}
+
+.heroTitle {
+    @apply text-5xl md:text-6xl font-bold mb-6;
+    color: var(--darkColor);
+    line-height: 1.1;
+}
+
+.heroSubtitle {
+    @apply text-xl md:text-2xl;
+    color: var(--grayColor);
+    line-height: 1.6;
+}
+
+/* Solutions Container */
+.solutionsContainer {
+    @apply py-8 md:py-12;
+}
+
+.solutionRow {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8 mb-8 md:mb-12;
+    min-height: 500px;
+}
+
+.solutionRow:last-child {
+    @apply mb-0;
+}
+
+.solutionItem {
+    @apply flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 p-8 md:p-12;
+    background: white;
+    border-radius: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(var(--primaryColorRGB), 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.solutionItem:hover {
+    background: linear-gradient(135deg, rgba(var(--primaryColorRGB), 0.04), rgba(var(--secondaryColorRGB), 0.04));
+    border-color: rgba(var(--primaryColorRGB), 0.15);
+    box-shadow: 0 12px 32px rgba(var(--primaryColorRGB), 0.12);
+    transform: translateY(-4px);
+}
+
+.solutionContent {
+    @apply flex-1 flex flex-col justify-center;
+    z-index: 2;
+}
+
+.solutionName {
+    @apply text-3xl md:text-4xl font-bold mb-3;
+    color: var(--darkColor);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.solutionTagline {
+    @apply text-lg md:text-xl mb-8;
+    color: var(--grayColor);
+    line-height: 1.6;
+}
+
+.solutionCtas {
+    @apply flex flex-col gap-4;
+    width: fit-content;
+}
+
+.ctaLink {
+    @apply inline-flex items-center gap-2 text-lg font-semibold;
+    color: var(--primaryColor);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    width: fit-content;
+    padding: 0.5rem 0;
+}
+
+.ctaLink::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primaryColor);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctaLink:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.ctaLink:hover {
+    gap: 0.75rem;
+}
+
+.ctaLink i {
+    @apply text-base transition-all duration-300;
+    display: inline-block;
+}
+
+.ctaLink:hover i {
+    transform: translateX(4px);
+}
+
+.ctaLinkSecondary {
+    @apply inline-flex items-center gap-2 text-lg font-semibold;
+    color: var(--grayColor);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    width: fit-content;
+    padding: 0.5rem 0;
+}
+
+.ctaLinkSecondary::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primaryColor);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctaLinkSecondary:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.ctaLinkSecondary:hover {
+    color: var(--primaryColor);
+    gap: 0.75rem;
+}
+
+.ctaLinkSecondary i {
+    @apply text-base transition-all duration-300;
+    display: inline-block;
+}
+
+.ctaLinkSecondary:hover i {
+    transform: translateX(4px);
+}
+
+.solutionImage {
+    @apply flex-1 flex items-center justify-center;
+    min-height: 300px;
+    z-index: 1;
+}
+
+.imagePlaceholder {
+    @apply w-full h-full flex items-center justify-center rounded-2xl;
+    background: linear-gradient(135deg, rgba(var(--primaryColorRGB), 0.08), rgba(var(--secondaryColorRGB), 0.08));
+    font-size: 6rem;
+    color: rgba(var(--primaryColorRGB), 0.25);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.imagePlaceholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(var(--primaryColorRGB), 0.1), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.solutionItem:hover .imagePlaceholder {
+    background: linear-gradient(135deg, rgba(var(--primaryColorRGB), 0.12), rgba(var(--secondaryColorRGB), 0.12));
+    color: rgba(var(--primaryColorRGB), 0.35);
+    transform: scale(1.08);
+}
+
+.solutionItem:hover .imagePlaceholder::before {
+    opacity: 1;
+}
+
+/* CTA Final Section */
+.ctaFinalSection {
+    @apply py-16 md:py-24 px-4 text-center;
+    background: linear-gradient(135deg, rgba(var(--primaryColorRGB), 0.02), rgba(var(--secondaryColorRGB), 0.02));
+    border-radius: 2rem;
+    border: 1px solid rgba(var(--primaryColorRGB), 0.08);
+    margin-top: 2rem;
+}
+
+.ctaFinalTitle {
+    @apply text-3xl md:text-4xl font-bold mb-6;
+    color: var(--darkColor);
+    letter-spacing: -0.02em;
+}
+
+.ctaFinalDescription {
+    @apply text-lg mb-8 max-w-2xl mx-auto;
+    color: var(--grayColor);
+    line-height: 1.6;
+}
+
+.ctaFinalButton {
+    @apply px-10 py-4 rounded-lg font-semibold inline-flex items-center gap-2;
+    background: linear-gradient(135deg, var(--primaryColor), var(--secondaryColor));
+    color: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border: none;
+    box-shadow: 0 4px 16px rgba(var(--primaryColorRGB), 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.ctaFinalButton::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ctaFinalButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(var(--primaryColorRGB), 0.3);
+}
+
+.ctaFinalButton:hover::before {
+    opacity: 1;
+}
+
+.ctaFinalButton i {
+    @apply transition-transform duration-300;
+}
+
+.ctaFinalButton:hover i {
+    transform: translateX(4px);
+}
+
+/* Comparison Section */
+.comparisonSection {
+    @apply py-16 md:py-24 px-4 mt-16;
+    background: linear-gradient(135deg, rgba(var(--primaryColorRGB), 0.03), rgba(var(--secondaryColorRGB), 0.03));
+    border-radius: 2rem;
+}
+
+.comparisonTable {
+    @apply max-w-5xl mx-auto;
+    display: grid;
+    gap: 1px;
+    background: #e5e7eb;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.comparisonRow {
+    @apply grid grid-cols-4 gap-0;
+    background: white;
+}
+
+.comparisonCell {
+    @apply p-6 text-center;
+    border-right: 1px solid #e5e7eb;
+}
+
+.comparisonCell:last-child {
+    border-right: none;
+}
+
+.comparisonCell strong {
+    @apply block font-bold;
+    color: var(--darkColor);
+}
+
+.comparisonRow:first-child .comparisonCell {
+    @apply bg-gray-50 font-semibold;
+    color: var(--darkColor);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .solutionRow {
+        @apply grid-cols-1;
+        min-height: auto;
+    }
+
+    .solutionItem {
+        @apply flex-col text-center gap-6;
+        padding: 1.5rem;
+    }
+
+    .solutionContent {
+        @apply items-center text-center;
+    }
+
+    .solutionCtas {
+        @apply items-center justify-center;
+    }
+
+    .solutionImage {
+        @apply w-full;
+        min-height: 250px;
+    }
+
+    .imagePlaceholder {
+        font-size: 4rem;
+    }
+
+    .heroTitle {
+        @apply text-3xl;
+    }
+
+    .sectionTitle {
+        @apply text-2xl;
+    }
+
+    .comparisonRow {
+        @apply grid-cols-2;
+    }
+
+    .comparisonCell {
+        @apply p-4 text-sm;
+    }
+
+    .ctaFinalSection {
+        @apply py-12 px-4;
+    }
+
+    .ctaFinalTitle {
+        @apply text-2xl;
+    }
+
+    .ctaFinalButton {
+        @apply px-6 py-3 text-base;
+    }
+}

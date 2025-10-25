@@ -20,7 +20,9 @@ export default function FooterComponent(): ReactNode {
 
 					<div className={style.corporationLinks}>
 						<Link href={'mailto:contact@aymericpixel.com'} aria-label={"Me contacter par email à contact@aymericpixel.com"}><i className="fi fi-rr-envelope"></i></Link>
+						<Link href={'tel:+33612683095'} target={"_blank"} aria-label={"Appel téléphonique"}><i className="fi fi-rr-circle-phone"></i></Link>
 						<Link href={'https://linkedin.com/in/aymeric-leger-achard'} target={"_blank"} aria-label={"Accès à la page LinkedIn"}><i className="fi fi-brands-linkedin"></i></Link>
+						<Link href={'https://linkedin.com/in/aymeric-leger-achard'} target={"_blank"} aria-label={"Accès à la page Instagram"}><i className="fi fi-brands-instagram"></i></Link>
 					</div>
 				</div>
 				<div className={style.footerLinksWrapper}>

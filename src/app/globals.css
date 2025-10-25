@@ -8,6 +8,9 @@
     --lightModeColor: #F7F7F7;
     --grayColor: #676767;
 
+    --primaryColorRGB: 0, 135, 103;
+    --secondaryColorRGB: 41, 168, 161;
+
     --fontAccent: var(--font-poppins);
     scroll-behavior: smooth;
 }
