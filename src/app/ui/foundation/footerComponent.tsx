@@ -25,6 +25,7 @@ export default function FooterComponent(): ReactNode {
 						<Link href={'https://www.instagram.com/aymericpixel?igsh=cjlpMmFtZ2lnZW00&utm_source=qr'} target={"_blank"} aria-label={"Accès à la page Instagram"}><i className="fi fi-brands-instagram"></i></Link>
 						<Link href={'https://www.facebook.com/profile.php?id=61583017550921'} target={"_blank"} aria-label={"Accès à la page Facebook"}><i className="fi fi-brands-facebook"></i></Link>
 						<Link href={'https://www.tiktok.com/@aymeric.pixel?_t=ZN-90rnXQCyrG2&_r=1'} target={"_blank"} aria-label={"Accès au compte Tiktok"}><i className="fi fi-brands-tik-tok"></i></Link>
+						<Link href={'https://www.youtube.com/@aymericpixeloff'} target={"_blank"} aria-label={"Accès au compte YouTube"}><i className="fi fi-brands-youtube"></i></Link>
 						<Link href={'https://x.com/aymericpixeloff'} target={"_blank"} aria-label={"Accès au compte X"}><i className="fi fi-brands-twitter"></i></Link>
 					</div>
 				</div>
