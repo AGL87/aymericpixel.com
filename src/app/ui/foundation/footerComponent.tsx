@@ -22,7 +22,10 @@ export default function FooterComponent(): ReactNode {
 						<Link href={'mailto:contact@aymericpixel.com'} aria-label={"Me contacter par email à contact@aymericpixel.com"}><i className="fi fi-rr-envelope"></i></Link>
 						<Link href={'tel:+33612683095'} target={"_blank"} aria-label={"Appel téléphonique"}><i className="fi fi-rr-circle-phone"></i></Link>
 						<Link href={'https://linkedin.com/in/aymeric-leger-achard'} target={"_blank"} aria-label={"Accès à la page LinkedIn"}><i className="fi fi-brands-linkedin"></i></Link>
-						<Link href={'https://linkedin.com/in/aymeric-leger-achard'} target={"_blank"} aria-label={"Accès à la page Instagram"}><i className="fi fi-brands-instagram"></i></Link>
+						<Link href={'https://www.instagram.com/aymericpixel?igsh=cjlpMmFtZ2lnZW00&utm_source=qr'} target={"_blank"} aria-label={"Accès à la page Instagram"}><i className="fi fi-brands-instagram"></i></Link>
+						<Link href={'https://www.facebook.com/profile.php?id=61583017550921'} target={"_blank"} aria-label={"Accès à la page Facebook"}><i className="fi fi-brands-facebook"></i></Link>
+						<Link href={'https://www.tiktok.com/@aymeric.pixel?_t=ZN-90rnXQCyrG2&_r=1'} target={"_blank"} aria-label={"Accès au compte Tiktok"}><i className="fi fi-brands-tik-tok"></i></Link>
+						<Link href={'https://x.com/aymericpixeloff'} target={"_blank"} aria-label={"Accès au compte X"}><i className="fi fi-brands-twitter"></i></Link>
 					</div>
 				</div>
 				<div className={style.footerLinksWrapper}>
